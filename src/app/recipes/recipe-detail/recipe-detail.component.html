@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col-xs-12">
-    <img src="" alt="" class="img-responsive">
+    <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="img-responsive" style="max-height: 300px;">
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <h1>Rezaptname</h1>
+    <h1>{{recipe.name}}</h1>
   </div>
 </div>
 <div class="row">
@@ -13,7 +13,7 @@
     <div class="btn-group">
       <button type="button" class="btn btn-primary dropdown-toogle">Rezept verwalten <span class="caret"></span>
       </button>
-      
+
       <ul class="dropdown-menu">
         <li><a href="#">Zur Einkaufsliste</a></li>
         <li><a href="#">Rezept hinzufügen</a></li>
@@ -24,7 +24,7 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    Beschreibung
+    {{recipe.description}}
   </div>
 </div>
 <div class="row">

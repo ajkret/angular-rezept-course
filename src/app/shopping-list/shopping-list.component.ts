@@ -8,10 +8,12 @@ import { Ingredient } from '../shared/ingredient.model';
 })
 export class ShoppingListComponent {
   ingredients: Ingredient[] = [
-    new Ingredient('Kakaopulver',300),
+    new Ingredient('Kakaopulver', 300),
     new Ingredient('Ei', 1),
     new Ingredient('Zucker', 200),
     new Ingredient('Milch', 200),
   ];
-
+  onIngredientAdded(event: Ingredient) {
+    this.ingredients.push(event);
+  }
 }
