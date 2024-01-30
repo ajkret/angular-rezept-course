@@ -8,12 +8,13 @@ import { ShoppingListService } from '../shopping-list.service';
   styleUrls: ['./shopping-list-edit.component.css']
 })
 export class ShoppingListEditComponent {
-  @ViewChild('nameInput') nameInput:ElementRef;
-  @ViewChild('amountInput') amountInput:ElementRef;
+  @ViewChild('nameInput') nameInput: ElementRef;
+  @ViewChild('amountInput') amountInput: ElementRef;
 
-  constructor(private slService:ShoppingListService) {}
+  constructor(private slService: ShoppingListService) { }
+  
   onAddIngredient() {
-    const ingredient = new Ingredient(this.nameInput.nativeElement.value,this.amountInput.nativeElement.value);
+    const ingredient = new Ingredient(this.nameInput.nativeElement.value, this.amountInput.nativeElement.value);
     this.slService.addIngredient(ingredient);
 
   }

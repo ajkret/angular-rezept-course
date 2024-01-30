@@ -1,4 +1,4 @@
-<a href="#" class="list-group-item clearfix" (click)="onSelected($event)">
+<a style="cursor:hand" class="list-group-item clearfix"  [routerLink]="[index]" routerLinkActive="active"> <!-- Path, as an array -->
   <div class="pull-feft">
     <h4 class="list-group-item-heading">{{recipe.name}}</h4>
     <p class="list-group-item-text">{{recipe.description}}</p>
